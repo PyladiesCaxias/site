@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-8 blog-main">
+  {% for post in object_list %}
+  {% if post.status == 'p' %}
+    <div class="blog-post">
+           <h2 class="blog-post-title">{{ post.title }}
+             <!-- <a href="{% url 'post-detail' pk=post.pk %}"> - {{ post.title }}</a> -->
+           </h2>
+           <p class="blog-post-meta">{{ post.published_date|date }}</p>
+
+           <p>{{ post.text }}<p>
+
+          </div><!-- /.blog-post -->
+
+  {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}

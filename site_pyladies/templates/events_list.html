@@ -1,0 +1,14 @@
+{% block content %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        var meetupId = '{{ ID_MEETUP }}';
+        PyladiesMeetupWidget.addUpcomingMeetups(meetupId);
+    });
+</script>
+
+<h2 class="title">Próximos Eventos</h2>
+<hr />
+<div class="row">
+<div id="upcomingMeetupsList"></div>
+</div>
+{% endblock %}
