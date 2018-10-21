@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<header class="blog-header">
+    <div class="topo">
+        <div class="topoint">
+            <div class="row flex-nowrap align-items-center">
+                <div class="col-4 pt-1">
+                </div>
+                <div class="col-4 text-center">
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="col" href="mailto:caxiasdosul@pyladies.com" title="caxiasdosul@pyladies.com">
+                        <i class="far fa-envelope fa-2x"></i>
+                    </a>
+                    <a class="col" href="https://www.meetup.com/pt-BR/PyLadiesCaxiasdoSul/">
+                        <i class="fab fa-meetup fa-2x"></i>
+                    </a>
+                
+                    <a class="col" href="https://github.com/PyladiesCaxias">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+
+                    <a class="col" href="https://www.facebook.com/pyladiescaxiasdosul/">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topo2">
+        <div class="topo2int">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" border="0" width="230px"/>
+            </div>
+            <div class="frase">"Todas somos diferentes. Somos todas maravilhosas." (Lema da PyCon Japão, 2016)</div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menuint">
+                <img src="images/menu.png" border="0" width="40px" height="40px" class="menumobile" onclick="toggleMenu()">
+            <ul id="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Eventos</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Materiais</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
