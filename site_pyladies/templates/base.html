@@ -7,56 +7,186 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+		
+		<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
     </head>
     <body>
-        <div class="container">
-          {% block header %}
-          {% include 'header.html' %}
-          {% endblock %}
-
-          <div class="nav-scroller py-1 mb-2">
-              <nav class="nav d-flex justify-content-between">
-                  <a class="text-muted" href="{% url 'about' %}">Sobre</a>
-                  <a class=" text-muted" href="{% url 'events' %}">Eventos</a>
-            </nav>
-          </div>
-
-          <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-            <div class="col-md-6 px-0">
-              <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-              <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
-              <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+       <div class="topo">
+        <div class="topoint">
+            <div class="topoleft">
+                <ul>
+                    <li><img src="img/email.png" border="0" width="26" height="26"/></li>
+                    <li><a href="mailto:caxiasdosul@pyladies.com">caxiasdosul@pyladies.com</a></li>
+                </ul>
             </div>
-          </div>
-
-          <!-- Proximo evento  -->
-          <div class="row">
-                <div class="col-md-6">
-                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-                      <div class="card-body d-flex flex-column align-items-start">
-                            <strong class="d-inline-block mb-2 text-primary">World</strong>
-                            <h3 class="mb-0">
-                              <a class="text-dark" href="#">Featured post</a>
-                            </h3>
-                            <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#">Continue reading</a>
-                          </div>
-                          <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
-                        </div>
-              </div>
-          </div>
-        <main role="main" class="container">
-          <div class="row">
-          </div>
-        </main>
-          {% block content %}
-          {% endblock %}
+            <div class="toporight">
+                <a href="https://www.meetup.com/pt-BR/PyLadiesCaxiasdoSul/"><img src="img/meetup.png" border="0" width="26" height="26"/></a>
+                <a href="https://join.slack.com/t/pyladiesrs/shared_invite/enQtMjQ1ODQyOTQ0OTYyLWFhZTBjYTVmMzk0ZTA0OWI0ZjhjMzM1YTE1YzkyZWIxMjlmYjM3YTY0YmM3ZmRjZjg2NTZlZWEwNTA4ZmJiNWY"><img src="img/slack.png" border="0" width="26" height="26"/></a>
+                <a href="https://chat.whatsapp.com/5XcPUOcAmlx74eDcQkgYSE"><img src="img/whatsapp.png" border="0" width="26" height="26"/></a>
+                <a href="https://github.com/PyladiesCaxias"><img src="img/github.png" border="0" width="26" height="26"/></a>
+                <a href="https://www.facebook.com/pyladiescaxiasdosul/"><img src="img/facebook.png" border="0" width="26" height="26"/></a>
+            </div>
         </div>
+    </div>
+    <div class="topo2">
+        <div class="topo2int">
+            <div class="logo">
+                <img src="img/logo.png" border="0" width="230px"/>
+            </div>
+            <div class="frase">"Todas somos diferentes. Somos todas maravilhosas." (Lema da PyCon Japão, 2016)</div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menuint">
+                <img src="img/menu.png" border="0" width="40px" height="40px" class="menumobile" onclick="toggleMenu()">
+            <ul id="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Eventos</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Materiais</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="containerint">
+            <div class="leftside">
+                <div class="slideshow" id="slideshow">
+                    <div class="slideshowarea">
+                        <a href="">
+                            <div class="slide" style="background-image:url('img/dgcaxias1.jpg')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">Django Girls 1° Edição</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="slide" style="background-image:url('img/dgbento.jpg')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">Django Girls Bento Gonçalves</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.google.com.br/">
+                            <div class="slide" style="background-image:url('img/dgcaxias2.jpg')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">Django Girls Caxias do Sul 2° Edição</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.google.com.br/">
+                            <div class="slide" style="background-image:url('img/encontro.jpg')">
+                                <div class="slideinfo">
+                                    <div class="slideinfo_titulo">Roda de Conversa em Comeração ao Dia da Mulher</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget_titulo">Eventos</div>
+                    <div class="widget_conteudo">
+                        <div class="eventoarea1">
+                            <a href="">
+                                <div class="eventoitem eventobig">
+                                    <div class="eventoimg">
+                                        <img src="" border="0">
+                                    </div>
+                                    <div class="eventotitulo">
+                                        Título do próximo evento
+                                    </div>
+                                    <div class="eventoinfo">
+                                        Informações sobre o evento
+                                    </div>
+                                </div>  
+                            </a>
+                        </div>
+                        <div class="eventoarea2">
+                            <a href="">
+                                <div class="eventoitem">
+                                    <div class="eventoimg">
+                                        <img src="" border="0" width="80px" height="80px">
+                                    </div>
+                                    <div class="eventotitulo">
+                                        Título dos últimos evento
+                                    </div>
+                                    <div class="eventoinfo">
+                                        Informações sobre o evento
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="eventoitem">
+                                    <div class="eventoimg">
+                                        <img src="" border="0" width="80px" height="80px">
+                                    </div>
+                                    <div class="eventotitulo">
+                                        Título dos últimos evento
+                                    </div>
+                                    <div class="eventoinfo">
+                                        Informações sobre o evento
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="eventoitem">
+                                    <div class="eventoimg">
+                                        <img src="" border="0" width="80px" height="80px">
+                                    </div>
+                                    <div class="eventotitulo">
+                                        Título dos últimos evento
+                                    </div>
+                                    <div class="eventoinfo">
+                                        Informações sobre o evento
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightside">
+                <div class="widget">
+                    <div class="widget_titulo">Social</div>
+                    <div class="widget_conteudo">
+                        <a href=""><img src="img/facebookrosa.png" border="0" width="26px" height="26px"/></a>
+                        <a href=""><img src="img/githubrosa.png" border="0" width="26px" height="26px"/></a>
+                        <a href=""><img src="img/whatsapprosa.png" border="0" width="26px" height="26px"/></a>
+                        <a href=""><img src="img/slackrosa.png" border="0" width="26px" height="26px"/></a>
+                        <a href=""><img src="img/meetuprosa.png" border="0" width="26" height="26"/></a>  
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget_titulo">Materiais</div>
+                    <div class="widget_conteudo">
+                        <div class="evento_item">
+                            <a href="">Link material 1</a>
+                        </div>
+                        <div class="evento_item">
+                            <a href="">Link material 2</a>
+                        </div>
+                        <div class="evento_item">
+                            <a href="">Link material 3</a>
+                        </div>
+                        <div class="evento_item">
+                            <a href="">Link material 4</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget_titulo">Encontre-nos No Facebook</div>
+                    <div class="widget_conteudo">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpyladiescaxiasdosul%2F&tabs&width=270&height=214&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="270" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
